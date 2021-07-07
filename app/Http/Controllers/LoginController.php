@@ -41,6 +41,7 @@ class LoginController extends Controller
             $document = $request['username'];
             $password = md5($request['password']);
 
+
             $data = DB::table('users')
                 ->select('*')
                 ->where('username','=',$document)
